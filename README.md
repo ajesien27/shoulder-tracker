@@ -11,11 +11,14 @@ python3 -m http.server 8765
 
 Open `http://localhost:8765` (or your machine’s LAN IP from your phone on the same Wi‑Fi).
 
-## Publish
+## Live URL
 
-Publish **only** this `tracker/` folder (not the medical history markdown files in the parent directory).
+https://ajesien27.github.io/shoulder-tracker/
+
+Repo (tracker only — no medical notes): https://github.com/ajesien27/shoulder-tracker
 
 ## iPhone
 
-1. Open the site URL in **Safari**
-2. Share → **Add to Home Screen**
+1. Open the URL above in **Safari**
+2. Tap Share → **Add to Home Screen**
+3. First load needs network; later opens work offline
