@@ -592,7 +592,6 @@
           <div class="progress-bar"><span style="width:${pct}%"></span></div>
           <h1>${escapeHtml(ex.name)}</h1>
         </div>
-        ${exerciseBody(ex)}
         <div class="session-actions">
           <button type="button" class="done-btn ${isDone ? "done" : ""}" data-toggle-done="${type}:${ex.id}">
             ${isDone ? "✓ Done" : "Mark done"}
@@ -602,6 +601,7 @@
             <button type="button" class="btn btn-primary" data-session-nav="next">${index === total - 1 ? "Finish" : "Next"}</button>
           </div>
         </div>
+        ${exerciseBody(ex)}
       </div>
     `;
   }
