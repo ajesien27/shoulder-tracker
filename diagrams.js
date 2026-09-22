@@ -1,4 +1,4 @@
-/* Deterministic, instruction-matched exercise illustrations. */
+/* Two-frame exercise illustrations matched to the written cues. */
 (() => {
   const captions = {
     "doorway-pec": "Forearm on the frame. Step through until the chest opens.",
@@ -27,7 +27,7 @@
   const map = {};
   Object.keys(captions).forEach((id) => {
     map[id] = {
-      src: `./diagrams/${id}.svg`,
+      src: `./diagrams/${id}.webp`,
       caption: captions[id]
     };
   });
