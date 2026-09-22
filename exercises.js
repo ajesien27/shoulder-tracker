@@ -2,7 +2,7 @@
    Educational only — not medical advice. No clinic notes in this file. */
 
 window.EXERCISE_DATA = {
-  dailyGoal: 8,
+  dailyGoal: 7,
   gymGoalPerWeek: 3,
   daily: [
     {
@@ -27,20 +27,22 @@ window.EXERCISE_DATA = {
     {
       id: "thoracic-extension",
       group: "daily",
-      name: "Thoracic extension",
+      name: "Thoracic extension (towel)",
       dose: "8–10 slow breaths",
       setup: [
-        "Lie on your back with a foam roller or tightly rolled towel across your mid-back (below the shoulder blades).",
-        "Support your head with your hands or keep the chin slightly tucked.",
-        "Knees bent, feet flat."
+        "No foam roller needed. Roll a bath towel tightly into a firm cylinder about the size of a water bottle.",
+        "Lie on your back on the floor. Place the towel roll across your mid-back, just below the shoulder blades (not under the low back).",
+        "Bend your knees, feet flat. Interlace your fingers behind your head to support the neck, or rest your head on the floor if that feels fine.",
+        "No towel? Sit tall in a chair, hands behind your head, and lean back gently over the top of the chair back instead."
       ],
       steps: [
-        "Let your upper back drape over the roller. Do not force the neck into a big arch.",
-        "Take 8–10 slow breaths, expanding the ribs.",
-        "Optionally roll a few inches up or down to find a stiff segment, then breathe again."
+        "Let your upper back open over the towel — a gentle “drape,” not a hard arch.",
+        "Keep your ribs from flaring wildly. Breathe into the chest and sides for 8–10 slow breaths.",
+        "If you want more, scoot so the towel sits an inch higher or lower and breathe again on the stiffest spot.",
+        "Chair version: lean back a little, open the chest, take the same slow breaths, then sit tall again."
       ],
-      why: "A stiff mid-back and slumped posture load the neck and upper traps — the pattern behind your quarterly “cricks” and upper-back ache. Thoracic extension is the posture reset that paired with your new chair in 2025.",
-      cue: "Keep the motion in the mid-back, not the low back or neck. If looking left still bothers the right neck, keep range small.",
+      why: "A stiff mid-back and slumped posture load the neck and upper traps — the pattern behind your quarterly “cricks” and upper-back ache. This is the posture reset that paired with your new chair in 2025, rewritten so a bath towel is enough.",
+      cue: "Motion belongs in the mid-back. If your neck or low back does all the work, make the towel taller/firmer or use a smaller lean.",
       skipIf: "Dizziness, sharp neck pain, or arm tingling that gets worse and stays worse."
     },
     {
@@ -49,34 +51,37 @@ window.EXERCISE_DATA = {
       name: "Chin tucks",
       dose: "2 × 10 holds of 5 sec",
       setup: [
-        "Sit or stand tall, or lie on your back with a small towel under the neck.",
-        "Eyes level. Soften the jaw."
+        "Easiest: lie on your back on the floor, knees bent. Put a thin folded washcloth under your head if needed so your face is level (nose toward ceiling).",
+        "Or sit tall in a chair, feet flat, looking straight ahead at eye level (not down at your phone).",
+        "Relax your jaw — tongue resting on the roof of the mouth helps."
       ],
       steps: [
-        "Draw your chin straight back as if making a gentle double chin (not tipping the head down).",
-        "Hold 5 seconds. Feel length through the back of the neck.",
-        "Relax and repeat for 2 sets of 10."
+        "Imagine a string pulling the back of your skull straight back into the floor/chair — your chin slides back, not down.",
+        "Check in a mirror or with a finger on your chin: the chin should move backward into a soft “double chin,” while your eyes stay looking forward. Do not nod like you’re saying yes.",
+        "Hold that pulled-back position for 5 seconds while breathing normally. You should feel a gentle work in the front of the neck and a lengthening in the back.",
+        "Relax fully for 2 seconds. Repeat 10 times. Rest, then do a second set of 10."
       ],
-      why: "Deep neck flexors help unload the upper traps and the cervical segment that may be contributing to arm tingling. This is quiet posture work you can also do at your desk every 45 minutes.",
-      cue: "Small motion. If looking left still aggravates the right neck, stay in a pain-free range and skip aggressive holds.",
+      why: "This trains the deep muscles in the front of the neck that hold your head over your shoulders. When they’re lazy, the upper traps and neck joints take over — linked to your arm tingling and desk posture.",
+      cue: "If you’re nodding or looking at your toes, you’re doing a different exercise. Think “turtle pulling its head into its shell” — straight back.",
       skipIf: "Arm pain, numbness, or tingling increases and does not settle within a minute."
     },
     {
       id: "upper-trap-levator",
       group: "daily",
-      name: "Upper trap / levator stretch",
-      dose: "30 sec × 3 each side",
+      name: "Neck side stretch (upper trap + levator)",
+      dose: "30 sec × 2 each stretch, each side",
       setup: [
-        "Sit tall on a chair. Hold the seat with the hand on the side you are stretching to gently anchor the shoulder.",
-        "Keep the shoulder down — do not shrug into the stretch."
+        "Sit tall on a chair. Plant both feet on the floor.",
+        "To stretch the right side of the neck: hold the right edge of the seat with your right hand. That stops the right shoulder from hiking up.",
+        "Keep looking forward with a long neck before you start."
       ],
       steps: [
-        "Tilt your ear toward the opposite shoulder (upper trap), or turn the nose ~45° toward the opposite armpit then look down (levator).",
-        "Use the free hand for a light assist on the head — no yanking.",
-        "Hold 30 seconds. Switch sides. 3 holds each."
+        "Upper trap stretch (side bend): Slowly tip your left ear toward your left shoulder. Stop when you feel a mild pull from the right ear down into the right shoulder/neck. Optional: rest your left hand lightly on the right side of your head — no pulling hard. Hold 30 seconds. Switch sides.",
+        "Levator stretch (look to armpit): Sit tall again, right hand still holding the seat. Turn your nose about halfway toward your left armpit, then gently nod as if looking into that armpit. You should feel the pull a bit deeper along the right neck into the shoulder blade. Hold 30 seconds. Switch sides.",
+        "Do 2 holds of each stretch on each side. Breathe; never bounce."
       ],
-      why: "You overuse the upper traps when the lower traps are weak — the imbalance your chiro linked to nerve pinching and finger tingling. Stretching this muscle only sticks if you also strengthen the lower trap in the band and gym work.",
-      cue: "Anchor the shoulder down. Stretch should feel like a mild pull along the neck/shoulder, not a zap down the arm.",
+      why: "You overuse the upper traps when the lower traps are weak — the imbalance your chiro linked to nerve pinching and finger tingling. These two stretches hit the tight side-neck muscles that shrug and hike when you desk-sit.",
+      cue: "The stretching-side shoulder must stay down (that’s why you hold the chair). Mild pull = good. Zap down the arm = stop.",
       skipIf: "Radiating arm symptoms worsen or you feel dizzy."
     },
     {
@@ -117,41 +122,22 @@ window.EXERCISE_DATA = {
       skipIf: "Pain >3/10 or instability sensation."
     },
     {
-      id: "band-low-row",
+      id: "floor-slides",
       group: "daily",
-      name: "Band low row",
-      dose: "2–3 × 12",
-      setup: [
-        "Anchor the band in front of you at about mid-chest or slightly lower.",
-        "Hold the ends, arms long, soft elbows.",
-        "Stand tall — think “proud chest,” not arched low back."
-      ],
-      steps: [
-        "Pull the elbows back near your sides while drawing the shoulder blades down and back.",
-        "Imagine putting your shoulder blades into your back pockets — no upward shrug.",
-        "Hold 1 second, then reach forward with control."
-      ],
-      why: "Low rows train serratus and lower-trap patterns without going overhead. This counters the shrug habit that pinches nerves and feeds upper-back pain.",
-      cue: "Down and back, never up. If the neck tenses, lighten the band.",
-      skipIf: "Neck pain spikes or you cannot avoid shrugging."
-    },
-    {
-      id: "wall-slides",
-      group: "daily",
-      name: "Wall slides",
+      name: "Floor slides (wall-slide alternative)",
       dose: "2 × 8–10",
       setup: [
-        "Stand with your back, head, and butt lightly against a wall (or a few inches off if needed).",
-        "Backs of hands and forearms on the wall in a “goal post” or low W shape.",
-        "Ribs quiet — do not flare the chest hard."
+        "Lie on your back on the floor (carpet or a mat). Knees bent, feet flat.",
+        "Press your low back gently toward the floor; ribs quiet.",
+        "Bend your elbows and place the backs of your hands and forearms on the floor beside your head — like a goal-post or cactus shape. Wrists can stay slightly off the floor if needed."
       ],
       steps: [
-        "Slide the arms up the wall only as high as you can without shrugging or losing contact.",
-        "Pause, then slide back down with control.",
-        "Stop short of the height that forces the shoulders up toward the ears."
+        "Slowly slide both arms upward along the floor (toward overhead), only as far as the backs of the hands/forearms can stay near the floor without your shoulders shrugging toward your ears.",
+        "Pause 1 second, then slide back down to the starting goal-post shape.",
+        "If one side lifts or pinches first (often the left), stop at that height and work there — don’t force a full overhead reach."
       ],
-      why: "Wall slides teach upward rotation of the shoulder blades with serratus and lower trap — the opposite of the shrug pattern. Height is earned; shrugging is cheating.",
-      cue: "Left: stay lower. Quality over how high you reach.",
+      why: "Same job as wall slides — teach the shoulder blades to rotate up with serratus and lower trap — but you only need floor space, not a wide clear wall.",
+      cue: "No shrug. Left: shorter range is fine. Quality over how high you reach.",
       skipIf: "Front-shoulder pinch, numbness, or forced shrug to get higher."
     }
   ],
@@ -289,6 +275,43 @@ window.EXERCISE_DATA = {
       why: "Optional push volume that respects the anterior capsule. Not required for the weekly gym checklist.",
       cue: "Left lighter. No arching to get more range.",
       skipIf: "Apprehension or front-shoulder pain."
+    },
+    {
+      id: "band-low-row",
+      group: "optional",
+      name: "Band low row (skipped from daily)",
+      dose: "2–3 × 12",
+      setup: [
+        "Anchor the band in front of you at about mid-chest or slightly lower.",
+        "Hold the ends, arms long, soft elbows.",
+        "Stand tall — think “proud chest,” not arched low back."
+      ],
+      steps: [
+        "Pull the elbows back near your sides while drawing the shoulder blades down and back.",
+        "Imagine putting your shoulder blades into your back pockets — no upward shrug.",
+        "Hold 1 second, then reach forward with control."
+      ],
+      why: "Removed from your daily checklist per your request. Still here if you want it later — gym rows already cover a lot of this pattern.",
+      cue: "Down and back, never up. If the neck tenses, lighten the band.",
+      skipIf: "Neck pain spikes or you cannot avoid shrugging."
+    },
+    {
+      id: "wall-slides",
+      group: "optional",
+      name: "Wall slides (if you get wall space)",
+      dose: "2 × 8–10",
+      setup: [
+        "Stand with your back, head, and butt lightly against a wall.",
+        "Backs of hands and forearms on the wall in a goal-post or low W shape.",
+        "Ribs quiet — do not flare the chest hard."
+      ],
+      steps: [
+        "Slide the arms up the wall only as high as you can without shrugging.",
+        "Pause, then slide back down with control."
+      ],
+      why: "Classic version of floor slides. Your daily program uses the floor version instead because you lack a wide clear wall.",
+      cue: "Left: stay lower. Quality over height.",
+      skipIf: "Front-shoulder pinch or forced shrug."
     }
   ],
   later: [
@@ -306,7 +329,7 @@ window.EXERCISE_DATA = {
         "Thumbs up. Lower slowly."
       ],
       why: "Gold-standard lower-trap drill, but it is overhead. Wait until the left side trusts you.",
-      cue: "If you shrug or feel slide, go back to Ts and wall slides.",
+      cue: "If you shrug or feel slide, go back to Ts and floor slides.",
       skipIf: "Any instability."
     },
     {
