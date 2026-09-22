@@ -148,37 +148,39 @@ window.EXERCISE_DATA = {
       name: "Side-lying external rotation",
       dose: "3 × 12–15 each side",
       setup: [
-        "Lie on your side with a light dumbbell in the top hand.",
-        "Top elbow bent 90°, resting on your side (towel under the elbow if needed).",
-        "Head supported. Hips stacked."
+        "Lie on your non-working side. Put a light dumbbell in the top hand (start 2–5 lb / 1–2 kg — ego is useless here).",
+        "Bend the top elbow to 90°. Rest that elbow on your ribs (or on a small towel against your side) so the upper arm stays glued to your body.",
+        "Start with the forearm across your stomach — palm facing your belly. Head on your bottom arm or a pad. Hips stacked; don’t roll backward."
       ],
       steps: [
-        "Rotate the forearm up toward the ceiling without rolling the body back.",
-        "Pause at the top, lower slowly (2–3 seconds).",
-        "Finish all reps, then switch sides. Left side ~30% lighter if needed."
+        "Keeping the elbow pinned to your side, rotate the forearm up until it points roughly at the ceiling (forearm vertical, about 90° of rotation from the start).",
+        "That is the top — you do NOT need to go past vertical or flop the weight behind you. If the dumbbell wants to fall backward, you’ve gone too far; stop at vertical.",
+        "Pause 1 second, then lower slowly in 2–3 seconds back to the belly-start position.",
+        "If the last 3 reps are shaky or you roll your torso to cheat, the weight is too heavy. Finish the set, then switch sides. Use ~30% less on the left if it feels loose."
       ],
-      why: "EMG work (Cools) ranks this among the best moves for a high lower-trap : upper-trap ratio while training the posterior cuff — high value for both your trap imbalance and left-shoulder stability.",
-      cue: "No body roll. Left: lighter weight; stop if it feels like the ball wants to slide.",
+      why: "One of the best drills for posterior cuff + lower-trap balance without going overhead — high value for your trap imbalance and left-shoulder stability.",
+      cue: "Elbow stays glued. Top = forearm vertical, not past it. No body roll.",
       skipIf: "Apprehension or sharp pain."
     },
     {
-      id: "cable-row",
+      id: "kneeling-sa-row",
       group: "gym",
-      name: "Chest-supported or seated cable row",
-      dose: "3 × 10–12",
+      name: "Kneeling single-arm cable row",
+      dose: "3 × 10–12 each side",
       setup: [
-        "Chest-supported row machine, or seated cable with a neutral grip.",
-        "Feet planted. Spine long. Shoulders start slightly protracted.",
-        "Choose a load you can move without yanking."
+        "Set a cable handle at about mid-chest height (or slightly lower).",
+        "Half-kneeling: one knee down (same side as the working arm often feels stable; either is fine), the other foot planted in front with the shin roughly vertical — the stance you already like.",
+        "Hold the handle in the working hand, arm long toward the stack. Tall torso, soft ribs, eyes forward. Non-working hand can rest on the front thigh."
       ],
       steps: [
-        "Pull the handles to the lower ribs / upper abdomen.",
-        "Squeeze the shoulder blades down and together — think pockets, not ears.",
-        "Return with control. Do not let the weight yank you into a rounded shrug."
+        "Row the handle to the lower ribs / hip pocket — elbow stays close to your side, not flared high.",
+        "As you pull, draw that shoulder blade down and back (into the back pocket). Do not shrug toward the ear.",
+        "Pause 1 second, then reach forward with control until the shoulder blade opens again — don’t let the cable yank you into a rounded, shrugged finish.",
+        "Finish all reps, then switch legs and arms. Left side: lighter stack if it feels unstable."
       ],
-      why: "Builds mid-back endurance without the pull-up pattern that has repeatedly injured you between the shoulder blades. Safer horizontal pull for a recovering left shoulder.",
-      cue: "No shrug, no end-range yank. Left: stop short if the front of the shoulder feels open or unstable.",
-      skipIf: "Neck cranking or joint slide."
+      why: "Same mid-back job as a seated row, but your preferred half-kneeling stance adds trunk control and makes it harder to cheat with both arms. Safer horizontal pull than pull-ups for your history.",
+      cue: "Pull to the hip/ribs, blade down-and-back, no ear-shrug. Tall through the crown of the head.",
+      skipIf: "Neck cranking, front-shoulder “open” feeling, or joint slide."
     },
     {
       id: "prone-t",
@@ -205,56 +207,58 @@ window.EXERCISE_DATA = {
       name: "Face-pull to ear height",
       dose: "3 × 12",
       setup: [
-        "Cable or band at about face height with a rope attachment.",
-        "Step back so arms are long. Soft knees.",
-        "Plan to finish with hands by the ears — not elbows flared into a 90/90 “cocked” position."
+        "Cable with a rope, set around face / upper-chest height. Grab the rope ends with thumbs pointing backward (or a neutral grip).",
+        "Step back until arms are straight and there is light tension. Soft knees, tall posture.",
+        "Mental picture of the finish: hands beside your ears, like you’re framing your face — elbows pointing down-ish or out at shoulder height, NOT up by your head in a “stick-up” / throwing cock."
       ],
       steps: [
-        "Pull the rope toward your face, elbows below or at shoulder height.",
-        "Externally rotate so knuckles end near the ears.",
-        "Pause, then reach forward with control. Never chase a stretch that opens the front of the shoulder."
+        "Pull the rope toward your face by driving the elbows back.",
+        "As the rope approaches your nose/forehead line, gently rotate the hands so the knuckles end near the ears (small external rotation). Think “show the wall your knuckles beside your ears.”",
+        "Stop there. Do not keep pulling until elbows are high and the fronts of the shoulders feel stretched open — that 90/90 end range is the risky position after your dislocations.",
+        "Pause 1 second, then straighten the arms forward with control. Reset and repeat."
       ],
-      why: "Rear cuff and mid-back work that helps posture — but classic 90/90 face-pulls put the arm into the apprehension position that is risky after anterior dislocations. Ear-height keeps the value and drops the risk.",
-      cue: "Elbows stay lower. Left: lighter load; abort if you feel “open” or slide in front.",
+      why: "Trains rear shoulders and mid-back for posture. We deliberately finish at ear height so you get the benefit without parking the arm in the apprehension position that can reload a loose left shoulder.",
+      cue: "Finish = hands by ears, elbows not higher than shoulders. If it feels like a stretch across the front of the joint, you’ve gone too far — shorten the pull.",
       skipIf: "Any sense of the arm cocking into instability."
     },
     {
       id: "pushup-plus",
       group: "gym",
-      name: "Incline / knee push-up plus",
+      name: "Push-up + (plus)",
       dose: "3 × 8–12",
       setup: [
-        "Hands on a bench or wall (incline), or knees on the floor.",
-        "Plank shape: ribs stacked over pelvis, neck long.",
-        "Alternative: landmine press with a light load if push-ups still bother you."
+        "Yes — full (toe) push-ups are fine if you can hold a solid plank and the left shoulder feels quiet.",
+        "Hands under shoulders, body in one line from head to heels. If full push-ups break down (hips sag, shrug, or front-shoulder pinch), drop to knees or hands on a bench — same rules.",
+        "Neck long; don’t crane looking forward."
       ],
       steps: [
-        "Do a push-up through a comfortable range.",
-        "At the top, push the floor/bench away so the upper back rounds slightly (scapular protraction) — that is the “plus.”",
-        "Do not shrug. Reset and repeat."
+        "Lower into a normal push-up, then press back to the top plank.",
+        "Here is the important extra: at the top, push the floor away so your upper back rounds slightly and the shoulder blades slide apart around the ribcage — that is the “plus.” Hold 1 second.",
+        "Do not shrug the shoulders into your ears during the plus. Then lower into the next rep.",
+        "If full push-ups are easy but the plus disappears, slow down and cut reps until every rep has a clear plus."
       ],
-      why: "Serratus anterior is the other half of scapular upward rotation with the lower trap. Weak serratus shows up as winging and poor overhead control — relevant for sport return later.",
-      cue: "Plus = push the floor away, not hike the shoulders. Regress to wall if form breaks.",
+      why: "Normal push-ups train the chest and triceps; the plus is what hits serratus — the scapular muscle that pairs with your lower trap. That’s the piece that matters for your shoulder-blade control.",
+      cue: "Plus = push the floor away (shoulder blades spread), not hike the shoulders. Regress to knees/incline if form breaks.",
       skipIf: "Front-shoulder pain or inability to control the scapula."
     },
     {
       id: "farmer-carry",
       group: "gym",
-      name: "Farmer or suitcase carry",
+      name: "Farmer carry (preferred)",
       dose: "3 × 30–40 m",
       setup: [
-        "Pick up one (suitcase) or two (farmer) kettlebells/dumbbells you can hold with tall posture.",
-        "Shoulders packed down, ribs quiet, eyes forward.",
-        "Clear a walking path."
+        "Default for you: farmer carry — one dumbbell or kettlebell in EACH hand, matched weights.",
+        "Choose a load you can walk tall with: shoulders packed down, ribs quiet, eyes forward. If you shrug or lean, go lighter.",
+        "Clear a walking path. Suitcase (one side only) is a harder variation — save it for later; see Optional."
       ],
       steps: [
-        "Walk 30–40 meters without leaning or shrugging.",
-        "Suitcase: fight the side-bend; keep hips level.",
-        "Set the weights down with control. Rest and repeat for 3 carries."
+        "Pick up both weights, stand tall, and walk 30–40 meters.",
+        "Stay level — no hiking one shoulder, no side-bend, no looking down at your phone.",
+        "Set both weights down with control. Rest, then repeat for 3 total carries."
       ],
-      why: "Trains posture under load — quiet upper traps, durable grip, and trunk control — without putting the shoulder into risky end ranges. Easy to scale and hard to cheat if you watch the shrug.",
-      cue: "Tall and quiet. If the neck tenses, use less weight.",
-      skipIf: "Pain, numbness, or inability to keep the shoulder packed."
+      why: "Farmer (both hands) is the better default for your posture and upper-trap problem: it loads both sides evenly and rewards quiet shoulders. Suitcase carry is great for core anti-side-bend but asymmetrically loads one shoulder — less ideal as your main carry while the left still feels loose.",
+      cue: "Tall and quiet. Two matching weights. If the neck tenses, use less load.",
+      skipIf: "Pain, numbness, or inability to keep the shoulders packed."
     }
   ],
   optional: [
@@ -275,6 +279,40 @@ window.EXERCISE_DATA = {
       why: "Optional push volume that respects the anterior capsule. Not required for the weekly gym checklist.",
       cue: "Left lighter. No arching to get more range.",
       skipIf: "Apprehension or front-shoulder pain."
+    },
+    {
+      id: "cable-row",
+      group: "optional",
+      name: "Chest-supported / seated cable row",
+      dose: "3 × 10–12",
+      setup: [
+        "Chest-supported row machine, or seated cable with a neutral grip.",
+        "Feet planted. Spine long."
+      ],
+      steps: [
+        "Pull to the lower ribs. Shoulder blades down and back — no shrug.",
+        "Return with control."
+      ],
+      why: "Alternate to your main kneeling single-arm row if the cable bay is taken or you want a bilateral version.",
+      cue: "No shrug, no end-range yank.",
+      skipIf: "Neck cranking or joint slide."
+    },
+    {
+      id: "suitcase-carry",
+      group: "optional",
+      name: "Suitcase carry (one-sided)",
+      dose: "3 × 30–40 m each side",
+      setup: [
+        "One dumbbell or kettlebell in one hand only. Other hand free.",
+        "Only after farmer carries feel easy and tall."
+      ],
+      steps: [
+        "Walk without leaning away from or into the weight — hips and shoulders level.",
+        "Switch hands each carry."
+      ],
+      why: "Harder core challenge than farmer carries. Not your default while the left shoulder is still loose — farmer first.",
+      cue: "Stay vertical. If you hike the loaded shoulder, go lighter.",
+      skipIf: "Pain, numbness, or inability to stay level."
     },
     {
       id: "band-low-row",
