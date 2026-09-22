@@ -508,8 +508,6 @@
               .join("")}
           </div>
         </div>
-
-        <p class="muted disclaimer-short">Educational home program · not medical advice</p>
       </div>
       ${renderNav("today")}
     `;
