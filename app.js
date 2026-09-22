@@ -33,22 +33,38 @@
     return WHY_LINES[dayOfYear(d) % WHY_LINES.length];
   }
 
-  function gymRingHtml(gymWeek, goal) {
+  function progressRingHtml(done, goal, opts = {}) {
+    const variant = opts.variant || "gym";
+    const label = opts.label || `${done} of ${goal}`;
     const r = 34;
     const c = 2 * Math.PI * r;
-    const pct = Math.min(1, goal ? gymWeek / goal : 0);
+    const pct = Math.min(1, goal ? done / goal : 0);
     const offset = c * (1 - pct);
     return `
-      <div class="gym-ring" role="img" aria-label="${gymWeek} of ${goal} gym sessions this week">
+      <div class="progress-ring progress-ring-${variant}" role="img" aria-label="${escapeHtml(label)}">
         <svg viewBox="0 0 88 88" width="88" height="88" aria-hidden="true">
           <circle class="ring-track" cx="44" cy="44" r="${r}"></circle>
           <circle class="ring-fill" cx="44" cy="44" r="${r}"
             stroke-dasharray="${c.toFixed(2)}"
             stroke-dashoffset="${offset.toFixed(2)}"></circle>
         </svg>
-        <div class="ring-label"><span class="ring-num">${gymWeek}/${goal}</span></div>
+        <div class="ring-label"><span class="ring-num">${done}/${goal}</span></div>
       </div>
     `;
+  }
+
+  function gymRingHtml(gymWeek, goal) {
+    return progressRingHtml(gymWeek, goal, {
+      variant: "gym",
+      label: `${gymWeek} of ${goal} gym sessions this week`
+    });
+  }
+
+  function stretchRingHtml(stretchDays, goal) {
+    return progressRingHtml(stretchDays, goal, {
+      variant: "stretch",
+      label: `${stretchDays} of ${goal} stretch days this week`
+    });
   }
 
   function monthGrid(store, ref = new Date()) {
@@ -266,6 +282,19 @@
     return count;
   }
 
+  function stretchDaysThisWeek(store, ref = new Date()) {
+    const start = startOfWeek(ref);
+    let count = 0;
+    for (let i = 0; i < 7; i++) {
+      const d = new Date(start);
+      d.setDate(start.getDate() + i);
+      const key = todayKey(d);
+      const rec = store.days[key];
+      if (rec && isDailyComplete(rec)) count += 1;
+    }
+    return count;
+  }
+
   function stretchStreak(store, ref = new Date()) {
     let streak = 0;
     const cursor = new Date(ref.getFullYear(), ref.getMonth(), ref.getDate());
@@ -390,6 +419,7 @@
     const dailyDone = dailyDoneCount(rec);
     const gymDone = gymDoneCount(rec);
     const gymWeek = gymSessionsThisWeek(store);
+    const stretchWeek = stretchDaysThisWeek(store);
     const streak = stretchStreak(store);
     const strip = weekStrip(store);
     const firstRun = !localStorage.getItem(FIRST_RUN_KEY);
@@ -424,18 +454,18 @@
         }
 
         <div class="status-row">
-          <div class="stat stat-stretch">
-            <div class="label">Stretches</div>
-            <div class="value">${dailyDone}/${daily.length}</div>
+          <div class="stat">
+            <div class="label">Stretch week</div>
+            ${stretchRingHtml(stretchWeek, 7)}
             <div class="sub">${
               !daily.length
                 ? "None enabled — Edit tab"
                 : isDailyComplete(rec)
                   ? "Done for today"
-                  : "Aim: every day"
+                  : `${dailyDone}/${daily.length} today`
             }</div>
           </div>
-          <div class="stat stat-gym">
+          <div class="stat">
             <div class="label">Gym week</div>
             ${gymRingHtml(gymWeek, DATA.gymGoalPerWeek)}
             <div class="sub">${
@@ -765,6 +795,7 @@
     const store = loadStore();
     const strip = weekStrip(store);
     const gymWeek = gymSessionsThisWeek(store);
+    const stretchWeek = stretchDaysThisWeek(store);
     const streak = stretchStreak(store);
     const dailyN = activeDaily().length;
     const gymN = activeGym().length;
@@ -774,14 +805,19 @@
       <div class="screen">
         <div class="screen-header"><div><h1>Week</h1><p class="muted">Monday–Sunday · gym goal ${DATA.gymGoalPerWeek}</p></div></div>
         <div class="status-row">
-          <div class="stat stat-gym">
-            <div class="label">Gym sessions</div>
+          <div class="stat">
+            <div class="label">Stretch week</div>
+            ${stretchRingHtml(stretchWeek, 7)}
+          </div>
+          <div class="stat">
+            <div class="label">Gym week</div>
             ${gymRingHtml(gymWeek, DATA.gymGoalPerWeek)}
           </div>
-          <div class="stat stat-stretch">
-            <div class="label">Stretch streak</div>
-            <div class="value">${streak}</div>
-          </div>
+        </div>
+        <div class="stat stat-streak">
+          <div class="label">Stretch streak</div>
+          <div class="value">${streak} day${streak === 1 ? "" : "s"}</div>
+          <div class="sub">Full daily checklist counts</div>
         </div>
         <div class="card">
           <h2>This week</h2>

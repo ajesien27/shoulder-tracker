@@ -188,6 +188,7 @@ p {
   margin-top: 0.35rem;
 }
 
+.progress-ring,
 .gym-ring {
   position: relative;
   width: 88px;
@@ -195,6 +196,7 @@ p {
   margin: 0.35rem auto 0;
 }
 
+.progress-ring svg,
 .gym-ring svg {
   display: block;
   transform: rotate(-90deg);
@@ -214,6 +216,14 @@ p {
   stroke: var(--warn);
   stroke-linecap: round;
   transition: stroke-dashoffset 0.35s ease;
+}
+
+.progress-ring-stretch .ring-fill {
+  stroke: var(--accent);
+}
+
+.progress-ring-gym .ring-fill {
+  stroke: var(--warn);
 }
 
 .ring-label {
