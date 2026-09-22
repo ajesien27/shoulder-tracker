@@ -13,6 +13,72 @@
     customizeFilter: "daily" // daily | gym | optional | later | removed
   };
 
+  const WHY_LINES = [
+    "Quiet shoulders today mean fewer “cricks” tomorrow.",
+    "Lower traps do the work so upper traps can stop shrugging.",
+    "A stable left shoulder is built with boring, consistent reps.",
+    "Desk posture is training too — this undoes the hunch.",
+    "Small daily work beats the occasional heroic gym day.",
+    "You’re protecting pickleball and tennis, not chasing soreness.",
+    "Nerve-friendly days start with a calm neck and mid-back.",
+    "Consistency is the brace you can actually stick with."
+  ];
+
+  function dayOfYear(d = new Date()) {
+    const start = new Date(d.getFullYear(), 0, 0);
+    return Math.floor((d - start) / 86400000);
+  }
+
+  function dayWhy(d = new Date()) {
+    return WHY_LINES[dayOfYear(d) % WHY_LINES.length];
+  }
+
+  function gymRingHtml(gymWeek, goal) {
+    const r = 34;
+    const c = 2 * Math.PI * r;
+    const pct = Math.min(1, goal ? gymWeek / goal : 0);
+    const offset = c * (1 - pct);
+    return `
+      <div class="gym-ring" role="img" aria-label="${gymWeek} of ${goal} gym sessions this week">
+        <svg viewBox="0 0 88 88" width="88" height="88" aria-hidden="true">
+          <circle class="ring-track" cx="44" cy="44" r="${r}"></circle>
+          <circle class="ring-fill" cx="44" cy="44" r="${r}"
+            stroke-dasharray="${c.toFixed(2)}"
+            stroke-dashoffset="${offset.toFixed(2)}"></circle>
+        </svg>
+        <div class="ring-label"><span class="ring-num">${gymWeek}/${goal}</span></div>
+      </div>
+    `;
+  }
+
+  function monthGrid(store, ref = new Date()) {
+    const year = ref.getFullYear();
+    const month = ref.getMonth();
+    const first = new Date(year, month, 1);
+    const daysInMonth = new Date(year, month + 1, 0).getDate();
+    const startPad = (first.getDay() + 6) % 7;
+    const today = todayKey(ref);
+    const cells = [];
+    for (let i = 0; i < startPad; i++) cells.push({ empty: true });
+    for (let day = 1; day <= daysInMonth; day++) {
+      const d = new Date(year, month, day);
+      const key = todayKey(d);
+      const rec = store.days[key] || { daily: {}, gym: {} };
+      cells.push({
+        empty: false,
+        day,
+        key,
+        isToday: key === today,
+        daily: isDailyComplete(rec),
+        gym: isGymComplete(rec)
+      });
+    }
+    return {
+      label: first.toLocaleDateString(undefined, { month: "long", year: "numeric" }),
+      cells
+    };
+  }
+
   function todayKey(d = new Date()) {
     const y = d.getFullYear();
     const m = String(d.getMonth() + 1).padStart(2, "0");
@@ -334,7 +400,8 @@
         <div class="screen-header">
           <div>
             <h1>Today</h1>
-            <p class="muted">${escapeHtml(dateLabel)}</p>
+            <p class="muted date-line">${escapeHtml(dateLabel)}</p>
+            <p class="why-line">${escapeHtml(dayWhy(now))}</p>
           </div>
         </div>
 
@@ -352,7 +419,7 @@
         }
 
         <div class="status-row">
-          <div class="stat">
+          <div class="stat stat-stretch">
             <div class="label">Stretches</div>
             <div class="value">${dailyDone}/${daily.length}</div>
             <div class="sub">${
@@ -363,16 +430,16 @@
                   : "Aim: every day"
             }</div>
           </div>
-          <div class="stat">
+          <div class="stat stat-gym">
             <div class="label">Gym week</div>
-            <div class="value">${gymWeek}/${DATA.gymGoalPerWeek}</div>
+            ${gymRingHtml(gymWeek, DATA.gymGoalPerWeek)}
             <div class="sub">${
               !gym.length ? "None enabled — Edit tab" : `${gymDone}/${gym.length} lifts today`
             }</div>
           </div>
         </div>
 
-        <div class="stat" style="margin-bottom:1rem">
+        <div class="stat stat-streak">
           <div class="label">Stretch streak</div>
           <div class="value">${streak} day${streak === 1 ? "" : "s"}</div>
           <div class="sub">Full daily checklist counts</div>
@@ -390,7 +457,7 @@
 
         <div class="card">
           <h2>This week</h2>
-          <p class="muted">Teal = stretches done · Gold = gym session</p>
+          <p class="muted">Teal = stretches · Gold = gym</p>
           <div class="week-strip">
             ${strip
               .map(
@@ -407,7 +474,7 @@
           </div>
         </div>
 
-        <p class="muted">${escapeHtml(DATA.safety.disclaimer)}</p>
+        <p class="muted disclaimer-short">Educational home program · not medical advice</p>
       </div>
       ${renderNav("today")}
     `;
@@ -437,19 +504,37 @@
     if (index >= total) {
       const completeDaily = type === "daily" && isDailyComplete(rec);
       const completeGym = type === "gym" && isGymComplete(rec);
+      const fullyDone = type === "daily" ? completeDaily : completeGym;
+      const streak = stretchStreak(store);
+      const gymWeek = gymSessionsThisWeek(store);
+
+      if (fullyDone) {
+        return `
+          <div class="screen finish-screen">
+            <div class="finish-headline">${type === "daily" ? "Stretches done" : "Gym done"}</div>
+            <div class="finish-streak">
+              <div class="label">Stretch streak</div>
+              <div class="value">${streak} day${streak === 1 ? "" : "s"}</div>
+            </div>
+            <div class="finish-ring-wrap">
+              <div class="label">Gym this week</div>
+              ${gymRingHtml(gymWeek, DATA.gymGoalPerWeek)}
+            </div>
+            <p class="why-line">${escapeHtml(dayWhy())}</p>
+            <button type="button" class="btn btn-primary" data-go="today" style="width:100%;margin-top:1.25rem">Back to Today</button>
+          </div>
+        `;
+      }
+
       return `
         <div class="screen">
           <button type="button" class="back-btn" data-go="today">← Today</button>
           <div class="complete-toast card">
-            <div class="big">${type === "daily" ? "Stretches" : "Gym"} wrapped</div>
+            <div class="big-quiet">Session closed</div>
             <p>${
               type === "daily"
-                ? completeDaily
-                  ? `All ${total} done — streak updated.`
-                  : "Session closed. Finish unchecked items later for a full stretch day."
-                : completeGym
-                  ? `All ${total} lifts done — counts toward this week’s ${DATA.gymGoalPerWeek}.`
-                  : "Session closed. Check remaining lifts to count this as a gym day."
+                ? "Finish unchecked items later for a full stretch day and streak credit."
+                : "Check remaining lifts later to count this as a gym day."
             }</p>
             <button type="button" class="btn btn-primary" data-go="today" style="width:100%">Back to Today</button>
           </div>
@@ -678,20 +763,23 @@
     const streak = stretchStreak(store);
     const dailyN = activeDaily().length;
     const gymN = activeGym().length;
+    const month = monthGrid(store);
+    const dowHeaders = ["M", "T", "W", "T", "F", "S", "S"];
     return `
       <div class="screen">
         <div class="screen-header"><div><h1>Week</h1><p class="muted">Monday–Sunday · gym goal ${DATA.gymGoalPerWeek}</p></div></div>
         <div class="status-row">
-          <div class="stat">
+          <div class="stat stat-gym">
             <div class="label">Gym sessions</div>
-            <div class="value">${gymWeek}/${DATA.gymGoalPerWeek}</div>
+            ${gymRingHtml(gymWeek, DATA.gymGoalPerWeek)}
           </div>
-          <div class="stat">
+          <div class="stat stat-stretch">
             <div class="label">Stretch streak</div>
             <div class="value">${streak}</div>
           </div>
         </div>
         <div class="card">
+          <h2>This week</h2>
           <div class="week-strip">
             ${strip
               .map(
@@ -707,6 +795,27 @@
               .join("")}
           </div>
           <p class="muted" style="margin-top:0.85rem;margin-bottom:0">Teal stretch · Gold gym</p>
+        </div>
+        <div class="card">
+          <h2>${escapeHtml(month.label)}</h2>
+          <div class="month-dow">
+            ${dowHeaders.map((h) => `<span>${h}</span>`).join("")}
+          </div>
+          <div class="month-grid">
+            ${month.cells
+              .map((c) => {
+                if (c.empty) return `<div class="month-cell empty"></div>`;
+                return `
+                  <div class="month-cell ${c.isToday ? "today" : ""}">
+                    <span class="month-day">${c.day}</span>
+                    <span class="marks">
+                      <span class="dot ${c.daily ? "on-daily" : ""}"></span>
+                      <span class="dot ${c.gym ? "on-gym" : ""}"></span>
+                    </span>
+                  </div>`;
+              })
+              .join("")}
+          </div>
         </div>
         <div class="card">
           <h2>How tracking works</h2>
