@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" role="img">
+<title>Chin tuck</title>
+<defs>
+<marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#3da99c"/></marker>
+<filter id="shadow"><feDropShadow dx="0" dy="4" stdDeviation="5" flood-color="#000" flood-opacity=".28"/></filter>
+</defs>
+<rect width="1200" height="675" fill="#071827"/>
+<g transform="translate(24,0)">
+<rect x="0" y="28" width="558" height="596" rx="22" fill="#102536" stroke="#315064" stroke-width="2"/>
+<text x="28" y="76" fill="#f5f1e8" font-family="system-ui,sans-serif" font-size="24" font-weight="750" letter-spacing="1">START</text>
+<path d="M115 580 Q145 390 245 370 Q360 382 415 580 Z" fill="#303946"/><path d="M190 580 Q208 410 290 397 Q357 410 375 580 Z" fill="#287c74"/><rect x="250" y="282" width="62" height="135" rx="25" fill="#e8aa7d" stroke="#754d3b" stroke-width="3"/><circle cx="300" cy="255" r="72" fill="#e8aa7d" stroke="#754d3b" stroke-width="3"/><path d="M231 248 Q233 175 312 184 Q377 193 370 252" fill="#172635"/><path d="M370 251 l10 5 -10 5" fill="#e8aa7d" stroke="#754d3b" stroke-width="2"/><text x="280" y="110" text-anchor="middle" fill="#a8bdc9" font-family="system-ui,sans-serif" font-size="17" font-weight="650">EYES STAY LEVEL</text><text x="280" y="530" text-anchor="middle" fill="#a8bdc9" font-family="system-ui,sans-serif" font-size="17" font-weight="650">NEUTRAL</text>
+</g>
+<g transform="translate(618,0)">
+<rect x="0" y="28" width="558" height="596" rx="22" fill="#102536" stroke="#315064" stroke-width="2"/>
+<text x="28" y="76" fill="#f5f1e8" font-family="system-ui,sans-serif" font-size="24" font-weight="750" letter-spacing="1">TUCK</text>
+<path d="M115 580 Q145 390 245 370 Q360 382 415 580 Z" fill="#303946"/><path d="M190 580 Q208 410 290 397 Q357 410 375 580 Z" fill="#287c74"/><rect x="250" y="282" width="62" height="135" rx="25" fill="#e8aa7d" stroke="#754d3b" stroke-width="3"/><circle cx="260" cy="255" r="72" fill="#e8aa7d" stroke="#754d3b" stroke-width="3"/><path d="M191 248 Q193 175 272 184 Q337 193 330 252" fill="#172635"/><path d="M330 251 l10 5 -10 5" fill="#e8aa7d" stroke="#754d3b" stroke-width="2"/><text x="280" y="110" text-anchor="middle" fill="#a8bdc9" font-family="system-ui,sans-serif" font-size="17" font-weight="650">EYES STAY LEVEL</text><path d="M344 255 L232 255" fill="none" stroke="#3da99c" stroke-width="8" stroke-linecap="round" marker-end="url(#arrow)"/><text x="280" y="530" text-anchor="middle" fill="#3da99c" font-family="system-ui,sans-serif" font-size="17" font-weight="650">STRAIGHT BACK</text>
+</g>
+<text x="600" y="657" text-anchor="middle" fill="#a8bdc9" font-family="system-ui,sans-serif" font-size="18">The head glides backward as one unit; do not nod the chin down.</text>
+</svg>

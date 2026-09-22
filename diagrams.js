@@ -1,4 +1,4 @@
-/* Two-frame instructional illustrations for each exercise id. */
+/* Deterministic, instruction-matched exercise illustrations. */
 (() => {
   const captions = {
     "doorway-pec": "Forearm on the frame. Step through until the chest opens.",
@@ -20,14 +20,14 @@
     "band-low-row": "Band low in front. Pull the elbows back to the hips.",
     "wall-slides": "Back and arms on the wall. Slide the arms up.",
     "prone-y": "Arms into a Y. Lift only as high as the shoulders allow.",
-    scaption: "Raise arms in a V slightly in front. Stop at shoulder height.",
-    "closed-chain": "Hands on the wall. Hold with shoulders quiet and centered."
+    scaption: "Raise slightly forward of a side raise, thumbs up, toward 120°.",
+    "closed-chain": "Progress from wall plank to knee plank to side plank."
   };
 
   const map = {};
   Object.keys(captions).forEach((id) => {
     map[id] = {
-      src: `./diagrams/${id}.webp`,
+      src: `./diagrams/${id}.svg`,
       caption: captions[id]
     };
   });
