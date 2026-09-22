@@ -374,12 +374,15 @@
   }
 
   function exerciseBody(ex) {
-    const diagramFn = window.DIAGRAMS && window.DIAGRAMS[ex.id];
-    const diagram = diagramFn
-      ? `<div class="ex-diagram" role="img" aria-label="Diagram: ${escapeHtml(ex.name)}">${diagramFn()}</div>`
+    const diagram = window.DIAGRAMS && window.DIAGRAMS[ex.id];
+    const diagramHtml = diagram
+      ? `<figure class="ex-diagram">
+          <img class="ex-diagram-img" src="${escapeHtml(diagram.src)}" alt="${escapeHtml(ex.name)}" loading="lazy" width="1200" height="675" />
+          <figcaption class="ex-diagram-caption">${escapeHtml(diagram.caption)}</figcaption>
+        </figure>`
       : "";
     return `
-      ${diagram}
+      ${diagramHtml}
       <span class="dose-pill">${escapeHtml(ex.dose)}</span>
       <div class="section-label">Setup</div>
       ${listHtml(ex.setup)}
