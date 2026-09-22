@@ -345,7 +345,12 @@
   }
 
   function exerciseBody(ex) {
+    const diagramFn = window.DIAGRAMS && window.DIAGRAMS[ex.id];
+    const diagram = diagramFn
+      ? `<div class="ex-diagram" role="img" aria-label="Diagram: ${escapeHtml(ex.name)}">${diagramFn()}</div>`
+      : "";
     return `
+      ${diagram}
       <span class="dose-pill">${escapeHtml(ex.dose)}</span>
       <div class="section-label">Setup</div>
       ${listHtml(ex.setup)}
