@@ -165,16 +165,7 @@ p {
   padding: 0.9rem;
 }
 
-.stat-stretch {
-  border-left: 2px solid var(--accent);
-}
-
-.stat-gym {
-  border-left: 2px solid var(--warn);
-}
-
 .stat-streak {
-  border-left: 2px solid var(--accent-dim);
   margin-bottom: 1rem;
 }
 
